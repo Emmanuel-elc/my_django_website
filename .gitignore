@@ -1,0 +1,22 @@
+# Python cache files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+
+# Django stuff
+db.sqlite3
+/staticfiles/
+/media/
+
+# IDE configs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
