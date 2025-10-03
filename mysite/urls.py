@@ -1,7 +1,7 @@
 from django.contrib import admin
-from django.urls import path, include  # include is needed to include app urls
+from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),       # Django admin
-    path('', include('myprofile.urls')),   # root URL routed to myprofile app
+    path('admin/', admin.site.urls),
+    path('', include('myprofile.urls')),  # This includes the app URLs
 ]

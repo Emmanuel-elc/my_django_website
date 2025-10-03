@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Emmanuel Muganzi</title>
+    <link rel="stylesheet" href="{% static 'myprofile/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <h1 class="logo">Emmanuel Muganzi</h1>
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'projects' %}">Projects</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section for Projects -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>My Projects</h2>
+            <p>Here are some of the projects I have worked on, showcasing my skills and experience in web development and design.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects Portfolio</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Secure Voting System</h3>
+                    <p>A web-based voting platform using Node.js and Express, deployed on Render with GitHub integration. Features voter login, admin dashboard, real-time results with charts, and poll expiration.</p>
+                </div>
+                <div class="project-card">
+                    <h3>E-Commerce Website</h3>
+                    <p>Developed using Django and React, with user authentication, product listings, shopping cart, and payment integration via Stripe. Deployed on Heroku.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Student Magazine Design</h3>
+                    <p>Designed a student magazine featuring creative writing, motivational quotes, poems, Bible verses, leadership articles, and humor. Encourages creativity and community engagement.</p>
+                </div>
+                <!-- Add more project cards here if needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Emmanuel Muganzi. All rights reserved.</p>
+    </footer>
+</body>
+</html>
