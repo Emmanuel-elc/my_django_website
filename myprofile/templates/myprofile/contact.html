@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Emmanuel Muganzi</title>
+    <title>Contact Me</title>
     <link rel="stylesheet" href="{% static 'myprofile/style.css' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
     <nav>
         <div class="container">
             <h1 class="logo">Emmanuel Muganzi</h1>
@@ -21,21 +19,25 @@
         </div>
     </nav>
 
-    <!-- Contact Section -->
-    <section class="section contact-section">
+    <section class="section">
         <div class="container">
             <h2>Contact Me</h2>
-            <p>Feel free to get in touch via email, phone, or LinkedIn:</p>
-            <div class="contact-links">
-                <a href="https://mail.google.com/mail/?view=cm&to=emmanuelmuganzielc@gmail.com" target="_blank">Email</a>
-                <a href="tel:+256700000000" target="_blank">Phone</a>
-                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            </div>
+            {% if messages %}
+                {% for message in messages %}
+                    <p style="color:green;">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Your Name" required><br><br>
+                <input type="email" name="email" placeholder="Your Email" required><br><br>
+                <input type="text" name="subject" placeholder="Subject" required><br><br>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea><br><br>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Emmanuel Muganzi. All rights reserved.</p>
     </footer>
