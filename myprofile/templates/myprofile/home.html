@@ -11,16 +11,16 @@
 <body>
     <!-- Navbar -->
     <nav>
-        <div class="container">
-            
-            <h1 class="logo">Emmanuel Muganzi</h1>
-            <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="container">
+        <h1 class="logo">Emmanuel Muganzi</h1>
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'projects' %}">Projects</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
 
     <!-- Hero Section -->
     <section class="hero">
@@ -66,7 +66,7 @@
             <h2>Contact Me</h2>
             <p>You can reach me through the following:</p>
             <div class="contact-links">
-                <a href="mailto:emmanuelmuganzielc@gmail.com" target="_blank">Email</a>
+                <a href="https://mail.google.com/mail/?view=cm&to=emmanuelmuganzielc@gmail.com" target="_blank">Email</a>
                     <a href="tel:+256700000000" target="_blank">Phone</a>
                     <!-- Update the LinkedIn URL below to your actual profile -->
                     <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
