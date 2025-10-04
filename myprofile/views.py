@@ -3,6 +3,16 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
 
+def home(request):
+    """Render the homepage."""
+    return render(request, 'myprofile/home.html')
+
+
+def projects(request):
+    """Render the projects page."""
+    return render(request, 'myprofile/projects.html')
+
+
 def contact(request):
     if request.method == 'POST':
         name = request.POST.get('name')
