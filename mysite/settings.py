@@ -113,6 +113,15 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 import os
 
-EMAIL_HOST_USER = os.environ.get('emmanuelmuganzielc@gmail.com')            # your Gmail address
-EMAIL_HOST_PASSWORD = os.environ.get('rfcx nrng nfsw moyj')    # the 16-char app password
+# IMPORTANT: store real credentials in environment variables, not in source control.
+# Use names like EMAIL_HOST_USER and EMAIL_HOST_PASSWORD (or GMAIL_ADDRESS / GMAIL_APP_PASSWORD).
+# Example (PowerShell):
+#   $env:EMAIL_HOST_USER = "youremail@gmail.com"
+#   $env:EMAIL_HOST_PASSWORD = "your-16-char-app-password"
+# For deployments (Render, Heroku, etc.) set the environment variables in the service's settings.
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'emmanuelmuganzielc@gmail.com')  # e.g. 'youremail@gmail.com'
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'rfcxnrngnfswmoyg')  # 16-char app password
+
+# Use the host address as the default "from" address
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
