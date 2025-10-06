@@ -125,3 +125,48 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'rfcxnrngnfswmoyg') 
 # Use the host address as the default "from" address
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
+# If credentials aren't set, use the console backend for local testing to avoid
+# SMTP errors and 500 responses. In production, be sure to set the env vars.
+if not EMAIL_HOST_USER or not EMAIL_HOST_PASSWORD:
+    # Prints will appear in the server console; useful when running locally.
+    print('WARNING: EMAIL_HOST_USER or EMAIL_HOST_PASSWORD is not set. Using console email backend for local testing.')
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+# Basic logging: write Django errors and our app logger to a file so we can inspect
+# SMTP tracebacks and other exceptions without relying only on the server console.
+LOG_DIR = os.path.join(BASE_DIR, 'logs')
+os.makedirs(LOG_DIR, exist_ok=True)
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '[{asctime}] {levelname} {name} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(LOG_DIR, 'django.log'),
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+        # Our app logger
+        'myprofile': {
+            'handlers': ['file'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+    },
+}
+

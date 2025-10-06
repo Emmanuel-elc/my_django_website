@@ -79,5 +79,56 @@
     <footer>
         <p>&copy; 2025 Emmanuel Muganzi. All rights reserved.</p>
     </footer>
+    <script>
+        // Helper to get CSRF token from cookies
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const emailLink = document.querySelector('a[href^="mailto:"]');
+            if (!emailLink) return;
+
+            emailLink.addEventListener('click', function (e) {
+                // Prevent default to send via server instead of opening client mail app
+                e.preventDefault();
+
+                const recipient = emailLink.getAttribute('href').replace('mailto:', '');
+
+                const payload = new URLSearchParams();
+                payload.append('name', 'Website visitor');
+                payload.append('email', recipient);
+                payload.append('subject', 'Contact from website');
+                payload.append('message', 'Hello, I reached you via the website and would like to connect.');
+
+                const csrftoken = getCookie('csrftoken');
+
+                fetch('/contact/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRFToken': csrftoken || '',
+                    },
+                    body: payload.toString(),
+                }).then(resp => resp.json())
+                  .then(data => {
+                      if (data && data.success) {
+                          alert('Message sent — thank you!');
+                      } else {
+                          alert('Could not send message via server. Opening your mail app.');
+                          // Fallback: open mail client
+                          window.location.href = 'mailto:' + recipient;
+                      }
+                  }).catch(err => {
+                      console.error(err);
+                      // On network error fallback to mailto
+                      window.location.href = 'mailto:' + recipient;
+                  });
+            });
+        });
+    </script>
 </body>
 </html>
