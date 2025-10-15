@@ -48,8 +48,7 @@ def contact(request):
             messages.error(request, 'Invalid header found.')
             return redirect('contact')
         except Exception as e:
-            # If this is an SMTP authentication error, fall back to the console
-            # backend and resend so users still get a confirmation without a 500.
+            # If this is an SMTP authentication error, fall back to the console backend
             logger.exception('Error sending contact email (first attempt)')
             if isinstance(e, smtplib.SMTPAuthenticationError) or 'SMTPAuthenticationError' in type(e).__name__:
                 logger.warning('SMTP auth failed — falling back to console email backend and resending')
@@ -75,17 +74,17 @@ def contact(request):
                         return JsonResponse({'success': False, 'error': 'Error sending email.'}, status=500)
                     messages.error(request, 'An error occurred while sending your message. Please try again later.')
                     return redirect('contact')
-
+            
             # For other errors, log and return friendly message
             if request.headers.get('x-requested-with') == 'XMLHttpRequest':
-                return JsonResponse({'success': False, 'error': 'Error sending email.'}, status=500)
-            messages.error(request, 'An error occurred while sending your message. Please try again later.')
+                return JsonResponse({'success': False, 'error': 'Could not send message. Please try again later.'}, status=500)
+            messages.error(request, 'Could not send message. Please try again later.')
             return redirect('contact')
 
         # Success
         if request.headers.get('x-requested-with') == 'XMLHttpRequest':
-            return JsonResponse({'success': True, 'message': 'Email sent'})
-        messages.success(request, 'Your message has been sent successfully!')
+            return JsonResponse({'success': True})
+        messages.success(request, 'Message sent successfully!')
         return redirect('contact')
 
     return render(request, 'myprofile/contact.html')

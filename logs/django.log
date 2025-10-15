@@ -671,3 +671,48 @@ Traceback (most recent call last):
 TypeError: send_mail() got an unexpected keyword argument 'headers'
 [2025-10-15 05:44:42,614] ERROR django.request Internal Server Error: /contact/
 [2025-10-15 05:44:42,617] ERROR django.server "POST /contact/ HTTP/1.1" 500 51
+[2025-10-15 06:07:18,204] ERROR myprofile Error sending contact email (first attempt)
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 36, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<4 lines>...
+        headers={"Reply-To": email}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: send_mail() got an unexpected keyword argument 'headers'
+[2025-10-15 06:07:18,232] ERROR django.request Internal Server Error: /contact/
+[2025-10-15 06:07:18,233] ERROR django.server "POST /contact/ HTTP/1.1" 500 78
+[2025-10-15 06:07:21,813] ERROR myprofile Error sending contact email (first attempt)
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 36, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<4 lines>...
+        headers={"Reply-To": email}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: send_mail() got an unexpected keyword argument 'headers'
+[2025-10-15 06:07:21,817] ERROR django.request Internal Server Error: /contact/
+[2025-10-15 06:07:21,819] ERROR django.server "POST /contact/ HTTP/1.1" 500 78
+[2025-10-15 07:16:05,794] ERROR myprofile Error sending contact email (first attempt)
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 36, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<4 lines>...
+        headers={"Reply-To": email}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: send_mail() got an unexpected keyword argument 'headers'
+[2025-10-15 07:16:05,892] ERROR django.request Internal Server Error: /contact/
+[2025-10-15 07:16:05,895] ERROR django.server "POST /contact/ HTTP/1.1" 500 78
