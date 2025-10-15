@@ -1,3 +1,92 @@
+/* Modal Contact Form Styles */
+#contact-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+#contact-modal[style*="display: flex"] {
+    display: flex !important;
+}
+#contact-modal > div {
+    background: #fff;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(44,62,80,0.15);
+    animation: modalFadeIn 0.3s;
+}
+@keyframes modalFadeIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+#close-contact-modal {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+#close-contact-modal:hover {
+    color: #e67e22;
+}
+#contact-modal-form label {
+    font-weight: 500;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+#contact-modal-form input,
+#contact-modal-form textarea {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+#contact-modal-form input:focus,
+#contact-modal-form textarea:focus {
+    border-color: #e67e22;
+    box-shadow: 0 0 5px rgba(230, 126, 34, 0.2);
+    outline: none;
+}
+#contact-modal-form button {
+    width: 100%;
+    padding: 0.8rem 0;
+    background-color: #e67e22;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 0.5rem;
+}
+#contact-modal-form button:hover {
+    background-color: #d35400;
+}
+#contact-modal-status {
+    text-align: center;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 0.5em;
+}
 /* Reset some default styles */
 * {
     margin: 0;

@@ -253,3 +253,421 @@ Traceback (most recent call last):
   File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 662, in auth
     raise SMTPAuthenticationError(code, resp)
 smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-46e78c5d290sm111034105e9.0 - gsmtp')
+[2025-10-15 04:49:45,096] ERROR myprofile Error sending contact email
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 35, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<3 lines>...
+        fail_silently=False,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\__init__.py", line 92, in send_mail
+    return mail.send()
+           ~~~~~~~~~^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-426ce57cc03sm29782465f8f.4 - gsmtp')
+[2025-10-15 04:49:45,368] ERROR django.request Internal Server Error: /contact/
+[2025-10-15 04:49:45,369] ERROR django.server "POST /contact/ HTTP/1.1" 500 51
+[2025-10-15 04:49:46,538] ERROR myprofile Error sending contact email
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 35, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<3 lines>...
+        fail_silently=False,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\__init__.py", line 92, in send_mail
+    return mail.send()
+           ~~~~~~~~~^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-426ce582a9csm28714314f8f.12 - gsmtp')
+[2025-10-15 04:49:46,545] ERROR django.request Internal Server Error: /contact/
+[2025-10-15 04:49:46,546] ERROR django.server "POST /contact/ HTTP/1.1" 500 51
+[2025-10-15 04:49:47,311] ERROR myprofile Error sending contact email
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 35, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<3 lines>...
+        fail_silently=False,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\__init__.py", line 92, in send_mail
+    return mail.send()
+           ~~~~~~~~~^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-46fc1c5227fsm246576805e9.9 - gsmtp')
+[2025-10-15 04:49:47,316] ERROR django.request Internal Server Error: /contact/
+[2025-10-15 04:49:47,317] ERROR django.server "POST /contact/ HTTP/1.1" 500 51
+[2025-10-15 04:50:33,562] ERROR myprofile Error sending contact email
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 35, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<3 lines>...
+        fail_silently=False,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\__init__.py", line 92, in send_mail
+    return mail.send()
+           ~~~~~~~~~^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-426ce5d0006sm29037744f8f.34 - gsmtp')
+[2025-10-15 04:50:33,570] ERROR django.request Internal Server Error: /contact/
+[2025-10-15 04:50:33,571] ERROR django.server "POST /contact/ HTTP/1.1" 500 51
+[2025-10-15 04:51:28,898] ERROR myprofile Error sending contact email (first attempt)
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 36, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<3 lines>...
+        fail_silently=False,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\__init__.py", line 92, in send_mail
+    return mail.send()
+           ~~~~~~~~~^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-46fc78559c8sm79575185e9.4 - gsmtp')
+[2025-10-15 05:07:33,104] ERROR myprofile Error sending contact email (first attempt)
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 36, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<3 lines>...
+        fail_silently=False,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\__init__.py", line 92, in send_mail
+    return mail.send()
+           ~~~~~~~~~^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47101c3b29bsm24160265e9.15 - gsmtp')
+[2025-10-15 05:07:33,988] ERROR myprofile Error sending contact email (first attempt)
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 36, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<3 lines>...
+        fail_silently=False,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\__init__.py", line 92, in send_mail
+    return mail.send()
+           ~~~~~~~~~^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-426ce5825aasm28554477f8f.14 - gsmtp')
+[2025-10-15 05:12:48,804] ERROR myprofile Error sending contact email (first attempt)
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 36, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<3 lines>...
+        fail_silently=False,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\__init__.py", line 92, in send_mail
+    return mail.send()
+           ~~~~~~~~~^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-46fab3e3206sm172412245e9.4 - gsmtp')
+[2025-10-15 05:12:51,173] ERROR myprofile Error sending contact email (first attempt)
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 36, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<3 lines>...
+        fail_silently=False,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\__init__.py", line 92, in send_mail
+    return mail.send()
+           ~~~~~~~~~^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-426ce583424sm28343581f8f.21 - gsmtp')
+[2025-10-15 05:16:24,087] ERROR myprofile Error sending contact email (first attempt)
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 36, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<3 lines>...
+        fail_silently=False,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\__init__.py", line 92, in send_mail
+    return mail.send()
+           ~~~~~~~~~^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\mail\backends\smtp.py", line 95, in open
+    self.connection.login(self.username, self.password)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 750, in login
+    raise last_exception
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+                   ~~~~~~~~~^
+        authmethod, getattr(self, method_name),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        initial_response_ok=initial_response_ok)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-426ce582a9csm28841592f8f.12 - gsmtp')
+[2025-10-15 05:18:52,800] ERROR myprofile Error sending contact email (first attempt)
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 36, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<4 lines>...
+        headers={"Reply-To": email}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: send_mail() got an unexpected keyword argument 'headers'
+[2025-10-15 05:18:52,814] ERROR django.request Internal Server Error: /contact/
+[2025-10-15 05:18:52,815] ERROR django.server "POST /contact/ HTTP/1.1" 500 51
+[2025-10-15 05:44:36,762] ERROR myprofile Error sending contact email (first attempt)
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 36, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<4 lines>...
+        headers={"Reply-To": email}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: send_mail() got an unexpected keyword argument 'headers'
+[2025-10-15 05:44:36,817] ERROR django.request Internal Server Error: /contact/
+[2025-10-15 05:44:36,820] ERROR django.server "POST /contact/ HTTP/1.1" 500 51
+[2025-10-15 05:44:41,491] ERROR myprofile Error sending contact email (first attempt)
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 36, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<4 lines>...
+        headers={"Reply-To": email}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: send_mail() got an unexpected keyword argument 'headers'
+[2025-10-15 05:44:41,494] ERROR django.request Internal Server Error: /contact/
+[2025-10-15 05:44:41,495] ERROR django.server "POST /contact/ HTTP/1.1" 500 51
+[2025-10-15 05:44:42,609] ERROR myprofile Error sending contact email (first attempt)
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 36, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<4 lines>...
+        headers={"Reply-To": email}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: send_mail() got an unexpected keyword argument 'headers'
+[2025-10-15 05:44:42,614] ERROR django.request Internal Server Error: /contact/
+[2025-10-15 05:44:42,617] ERROR django.server "POST /contact/ HTTP/1.1" 500 51

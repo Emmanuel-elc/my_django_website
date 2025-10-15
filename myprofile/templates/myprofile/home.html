@@ -65,14 +65,34 @@
     <div class="container">
         <h2>Contact Me</h2>
         <p>You can reach me through the following:</p>
-        <div class="contact-links">
-            <a href="mailto:emmanuelmuganzielc@gmail.com" target="_blank">Email</a>
-            <a href="tel:+256700000000" target="_blank">Phone</a>
-            <a href="https://www.linkedin.com/in/emmanuel-muganzi" target="_blank">LinkedIn</a>
-            <a href="https://github.com/Emmanuel-elc" target="_blank">GitHub</a>
+                <div class="contact-links">
+                        <a href="#" id="open-contact-modal">Email</a>
+                        <a href="tel:+256700000000" target="_blank">Phone</a>
+                        <a href="https://www.linkedin.com/in/emmanuel-muganzi" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/Emmanuel-elc" target="_blank">GitHub</a>
+                </div>
         </div>
+</section>
+
+<!-- Contact Modal -->
+<div id="contact-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:1000; align-items:center; justify-content:center;">
+    <div style="background:#fff; padding:2rem; border-radius:8px; max-width:400px; margin:auto; position:relative;">
+        <button id="close-contact-modal" style="position:absolute; top:8px; right:8px; background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
+        <h3>Contact Me</h3>
+        <form id="contact-modal-form">
+            <label>Name:<br><input type="text" name="name" required></label><br><br>
+            <label>Email:<br><input type="email" name="email" required></label><br><br>
+            <label>Message:<br><textarea name="message" rows="4" required></textarea></label><br><br>
+            <button type="submit">Send</button>
+            <div id="contact-modal-status" style="margin-top:1em;"></div>
+        </form>
+    </div>
+</div>
     </div>
 </section>
+
+<!-- Hidden CSRF form so Django sets the csrftoken cookie on page load (helps AJAX) -->
+<form id="csrf-form" method="post" style="display:none;">{% csrf_token %}</form>
 
 
     <!-- Footer -->
@@ -80,55 +100,65 @@
         <p>&copy; 2025 Emmanuel Muganzi. All rights reserved.</p>
     </footer>
     <script>
-        // Helper to get CSRF token from cookies
-        function getCookie(name) {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) return parts.pop().split(';').shift();
-        }
+    // Helper to get CSRF token from cookies
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const emailLink = document.querySelector('a[href^="mailto:"]');
-            if (!emailLink) return;
+    document.addEventListener('DOMContentLoaded', function () {
+        // Modal logic
+        const modal = document.getElementById('contact-modal');
+        const openBtn = document.getElementById('open-contact-modal');
+        const closeBtn = document.getElementById('close-contact-modal');
+        const form = document.getElementById('contact-modal-form');
+        const statusDiv = document.getElementById('contact-modal-status');
 
-            emailLink.addEventListener('click', function (e) {
-                // Prevent default to send via server instead of opening client mail app
-                e.preventDefault();
-
-                const recipient = emailLink.getAttribute('href').replace('mailto:', '');
-
-                const payload = new URLSearchParams();
-                payload.append('name', 'Website visitor');
-                payload.append('email', recipient);
-                payload.append('subject', 'Contact from website');
-                payload.append('message', 'Hello, I reached you via the website and would like to connect.');
-
-                const csrftoken = getCookie('csrftoken');
-
-                fetch('/contact/', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                        'X-Requested-With': 'XMLHttpRequest',
-                        'X-CSRFToken': csrftoken || '',
-                    },
-                    body: payload.toString(),
-                }).then(resp => resp.json())
-                  .then(data => {
-                      if (data && data.success) {
-                          alert('Message sent — thank you!');
-                      } else {
-                          alert('Could not send message via server. Opening your mail app.');
-                          // Fallback: open mail client
-                          window.location.href = 'mailto:' + recipient;
-                      }
-                  }).catch(err => {
-                      console.error(err);
-                      // On network error fallback to mailto
-                      window.location.href = 'mailto:' + recipient;
-                  });
-            });
+        openBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.style.display = 'flex';
+            statusDiv.textContent = '';
         });
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) modal.style.display = 'none';
+        });
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            statusDiv.textContent = 'Sending...';
+            const formData = new FormData(form);
+            const payload = new URLSearchParams();
+            for (const [key, value] of formData.entries()) {
+                payload.append(key, value);
+            }
+            payload.append('subject', 'Contact from website');
+            const csrftoken = getCookie('csrftoken');
+            fetch('/contact/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRFToken': csrftoken || '',
+                },
+                body: payload.toString(),
+            }).then(resp => resp.json())
+              .then(data => {
+                  if (data && data.success) {
+                      statusDiv.textContent = 'Message sent — thank you!';
+                      form.reset();
+                  } else {
+                      statusDiv.textContent = 'Could not send message via server.';
+                  }
+              }).catch(err => {
+                  console.error(err);
+                  statusDiv.textContent = 'Network error.';
+              });
+        });
+    });
     </script>
 </body>
 </html>
