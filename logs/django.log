@@ -716,3 +716,170 @@ Traceback (most recent call last):
 TypeError: send_mail() got an unexpected keyword argument 'headers'
 [2025-10-15 07:16:05,892] ERROR django.request Internal Server Error: /contact/
 [2025-10-15 07:16:05,895] ERROR django.server "POST /contact/ HTTP/1.1" 500 78
+[2025-10-18 01:58:47,658] ERROR myprofile Error sending contact email (first attempt)
+Traceback (most recent call last):
+  File "C:\Users\MFL\Desktop\Muganzi Emmanuel ELC\Emma ELC\my django web site\mysite\my_django_website\myprofile\views.py", line 36, in contact
+    send_mail(
+    ~~~~~~~~~^
+        subject,
+        ^^^^^^^^
+    ...<4 lines>...
+        headers={"Reply-To": email}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: send_mail() got an unexpected keyword argument 'headers'
+[2025-10-18 02:16:23,389] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+[2025-10-18 02:16:23,795] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+[2025-10-18 02:16:38,011] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+[2025-10-18 02:16:39,362] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+[2025-10-18 02:18:40,647] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+[2025-10-18 02:18:40,994] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+[2025-10-18 02:18:43,580] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+[2025-10-18 02:18:43,744] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+[2025-10-18 02:19:09,840] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+[2025-10-18 02:19:10,597] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+[2025-10-18 02:19:52,902] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+[2025-10-18 02:19:53,089] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+[2025-10-18 02:19:53,922] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+[2025-10-18 02:19:54,171] ERROR django.security.DisallowedHost Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+  File "C:\Users\MFL\AppData\Local\Programs\Python\Python313\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '10.65.81.30:8000'. You may need to add '10.65.81.30' to ALLOWED_HOSTS.

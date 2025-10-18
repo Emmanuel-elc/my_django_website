@@ -10,8 +10,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY
 # ------------------------------
 SECRET_KEY = 'django-insecure-u_d+vtjwh7ni_g*ao7%y%6zv8vj=m#!0s(-g2!b!b0988862j4'
-DEBUG = False  # Set to False in production
-ALLOWED_HOSTS = ['my-django-website-ukd0.onrender.com', '127.0.0.1', 'localhost']
+DEBUG = True  # Set to False in production; enable True locally so static files are served during development
+ALLOWED_HOSTS = ['my-django-website-ukd0.onrender.com', '127.0.0.1', 'localhost', '10.65.81.30']
 
 # ------------------------------
 # APPLICATIONS
